@@ -1,0 +1,283 @@
+#autoevaluacion{
+	font-family:TelefonicaTextRegular, Arial;
+	font-size:16px;
+	color:#353535;
+	height: 460px;
+	padding:0;
+	margin:0;
+}
+
+#autoevaluacion #fondo_test{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+
+#autoevaluacion #contenido_test{
+	position: absolute;
+	z-index: 2;
+}
+
+#autoevaluacion #img_intro, #autoevaluacion #img_test{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+#introduccion{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#autoevaluacion #img_test{
+	display:none;
+}
+
+#contenido_test #titulo{
+	position: relative;
+	top:25px;
+}
+
+#contenido_test #subtitulo{
+	position: relative;
+	top:25px;
+}
+
+#contenido_test #descripcion{
+	position: relative;
+	top:20px;
+}
+
+#contenido_test h1{
+	color:#49a4b6;
+	/*text-shadow: #555 2px 2px 3px;*/
+	font-size:25px;
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=4);*/
+}
+
+#contenido_test h3{
+	color:#1eadc4;
+	font-family: TelefonicaTextBold, Arial;
+	font-size:20px;
+}
+
+
+#autoevaluacion #titulo p{
+	/*font-size: 20px;
+	font-weight: bold;
+	color:#1eadc4;
+	padding-bottom:3px;
+	margin:0px;*/
+}
+
+#autoevaluacion #subtitulo{
+	/*font-size: 13px;
+	font-weight: bold;
+	color:#1eadc4;*/
+}
+
+#autoevaluacion #descripcion{
+	margin:20px;
+	padding-right: 20px;
+	width: 450px;
+	text-align: left;
+	font-family:TelefonicaTextRegular, Arial;
+	font-size:16px;
+	color:#353535;
+}
+
+
+#autoevaluacion #descripcion p{
+	text-align: left;
+}
+
+
+#contenido_test #test{
+	margin-top:40px;
+}
+
+#autoevaluacion .form_{
+	display:block;
+	clear:both;
+}
+
+
+#autoevaluacion .question{
+	background-color:#137996;
+	width:750px;
+	margin-left:-30px;
+}
+
+#autoevaluacion .question p{
+	font-size:16px;
+	font-weight: bold;
+	color:#fff;
+	margin-left:25px;
+	width:600px;
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+#autoevaluacion .form_  label{
+	display:block;
+	margin:25px 50px 25px 65px;
+	/*margin-left:60px;
+	margin-right:50px;*/
+}
+
+#autoevaluacion .form_  label input{
+	margin-right: 5px;
+	float:left;
+}
+#autoevaluacion .form_  .textoInput{
+	display:block;
+	margin-left:30px;
+	margin-bottom:15px;
+	color:#6e6e6e;
+}
+
+#autoevaluacion #btIni{
+	/*position:relative;
+	top:103px;
+	left:560px;*/
+	position:absolute;
+	top:410px;
+	left:559px;
+	cursor:pointer;
+	border: none;
+	
+}
+
+#autoevaluacion #btNext, #autoevaluacion #btIntento{
+	position:absolute;
+	top:415px;
+	left:525px;
+	cursor:pointer;
+	border: none;
+	
+}
+
+.next_desactivado{
+	opacity: 0.6;
+	cursor:default;
+}
+
+.next_activado{
+	opacity: 1;
+	cursor:pointer;
+}
+
+.oculta_respuesta{
+	display:none;
+}
+
+#autoevaluacion img{
+	border: none;
+}
+
+#autoevaluacion #resultado p img{
+	vertical-align:bottom;	
+	margin-right:15px;
+}
+
+#autoevaluacion #resultado p{
+	text-align:center;
+	font-weight: bold;
+	font-size: 22px;
+	color:#2db2c8;
+}
+
+
+#contenido_test #porcentaje{
+	margin-left:30px;
+	margin-top:50px;
+	
+}
+
+#autoevaluacion #porcentaje p{
+	/*text-align:center;*/
+	font-weight: normal;
+	font-size: 16px;
+	color:#35355;
+	width:480px;
+}
+
+
+
+/*******************************************/
+
+#imagen_intro .derecha{
+	clear:both;
+	float:right;
+	margin-right:40px;
+}
+
+#imagen_intro .izquierda{
+	clear:both;
+	float:left;
+	margin-left:20px;
+}
+
+#imagen_intro .centro{
+	text-align:center;
+}
+
+/*******************************************/
+
+#test .feed_n{
+	position:absolute;
+	width: 830px;
+	display:none;
+	bottom: 5px;
+
+}
+
+#test .feed_n p{
+
+	margin-left: 276px;
+}
+
+
+#test .imgFeed_true, #test .imgFeed_false{
+	clear: both;
+	float: left;
+	border:0;
+	margin:0;
+	margin-left:16px;
+	margin-top:-15px;
+}
+
+#test .imgFeed_true{
+	background:url(../img/icTrue_test.png) 0 center no-repeat;
+	width: 250px;
+	height:80px;
+	clear: both;
+	float: left;
+}
+
+#test .imgFeed_false{
+	background:url(../img/icFalse_test.png) 0 center no-repeat;
+	width: 250px;
+	height:80px;
+	clear: both;
+	float: left;
+}
+
+/**************************************************/
+
+#titular_pagina{
+	width: 600px;
+}
+
+#texto_pagina{
+	width: 600px;
+}
+
+#titular_pagina h1{
+	color:#00a9e0;
+	font-size:30px;
+}

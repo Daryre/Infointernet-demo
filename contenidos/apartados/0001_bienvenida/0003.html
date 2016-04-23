@@ -1,0 +1,90 @@
+<div id="imagen">
+      <img src="contenidos/recursos/Demo-03.jpg" >
+</div>
+<div class="texto_imagen" name="20,20">
+
+<div style="padding-top:58%; padding-left:82%;">
+  <button id="reproducir">
+    <img src="contenidos/recursos/btn_play.png">
+  </button>      
+<!-- audio -->
+<div id="jquery_jplayer_audio_1" class="jp-jplayer"></div>
+<div id="jp_container_audio_1" class="jp-flat-audio" role="application" aria-label="media player" style="width:65%">
+  <div class="jp-play-control jp-control" style="border: 0; background-color: transparent; padding-bottom: 31%;
+}">
+    <button id="jo-play jp-button" role="button" aria-label="play" tabindex="0" style="border:0; background-color:transparent;">
+    <img src="contenidos/recursos/btn_play_hover.png">
+  </button>  
+  </div>
+  <div class="jp-bar">
+    <div class="jp-seek-bar jp-seek-bar-display"></div>
+    <div class="jp-seek-bar">
+      <div class="jp-play-bar"></div>
+      <div class="jp-details"><span class="jp-title" aria-label="title"></span></div>
+      <div class="jp-timing"><span class="jp-duration" role="timer" aria-label="duration"></span></div>
+    </div>
+  </div>
+  <div class="jp-no-solution">
+    Media Player Error<br />
+    Update your browser or Flash plugin
+  </div>
+</div>
+<!-- FIN audio -->
+
+</div>
+
+<script src="contenidos/../contenidos/js/jquery.min.js"></script>
+<script src="contenidos/js/jplayer/dist/jplayer/jquery.jplayer.min.js"></script>
+<script>
+  $(document).ready(function () {       
+    $('#reproducir').show();  
+    loadAudio("Bienvenida", "contenidos/recursos/audios/03.mp3");         
+    $('#jp_container_audio_1').hide();       
+    $('#reproducir').click(function () {      
+     $('#reproducir').hide();      
+     $("#jquery_jplayer_audio_1").jPlayer("play");
+     $('#jp_container_audio_1').fadeIn();      
+      
+   });
+
+
+function loadAudio(titulo, ruta)
+{
+    $("#jquery_jplayer_audio_1").jPlayer({
+    ready: function(event) {
+      $(this).jPlayer("setMedia", {
+        title: titulo,
+        mp3: ruta,
+      });
+    },
+    ended: function() { // The $.jPlayer.event.ended event
+       $('#jp_container_audio_1').hide();         
+      $('#reproducir').fadeIn();              
+    },
+    timeFormat: {
+      padMin: false
+    },
+    swfPath: "contenidos/js/jplayer/dist/jplayer",
+    supplied: "mp3",
+    cssSelectorAncestor: "#jp_container_audio_1",
+    useStateClassSkin: true,
+    autoBlur: false,
+    smoothPlayBar: true,
+    remainingDuration: true,
+    keyEnabled: true,
+    keyBindings: {
+      // Disable some of the default key controls
+      loop: null,
+      muted: null,
+      volumeUp: null,
+      volumeDown: null
+    },
+    wmode: "window"
+  });
+
+}
+
+
+
+  });
+</script>

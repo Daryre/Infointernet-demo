@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import url("font_face.css");
+
+body{
+	width: 981px;
+}
+
+#cabecera{
+	
+}
+
+#cabecera #img_cabecera{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	
+}
+
+/*************** MENÚ ******************/
+
+#cabecera #contenedor_menu{
+	position: absolute;	
+	/*display:inline;*/
+	width: 673px;
+	width: 780px;
+	height:100%;
+	overflow:hidden;
+	left:50px;
+}
+
+#cabecera #menu_mux{
+	position: absolute;
+	display: inline;
+	float: left;
+	white-space: nowrap; /*scroll horizontal*/
+/*	width: 673px;	*/
+	
+	top:15px;
+	
+	z-index:3;
+	/*overflow-y:hidden;
+	overflow-x:auto;*/
+}
+
+#cabecera .menu_mux{
+	display: inline-block;
+	cursor: pointer;
+	margin:0 2px 0 2px;
+	padding:5px 0px 5px 0px;
+	/*border:1 solid red;*/
+	border:none;
+	background:#fff;
+	width:80px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+#cabecera .menu_mux p{
+	display: inline;
+	/*font-family:Arial;*/
+	font-family: LatoLight, Arial;
+	font-size:25px;
+	font-weight:Bold;
+	color:#00313c;
+	
+}
+
+
+/*#menu_mux .menu_mux .tarjeta_seleccionada{*/
+#menu_mux .tarjeta_seleccionada{
+	background-color:#007486;
+	cursor: default;
+}
+
+#menu_mux .tarjeta_seleccionada p{
+	color:#fff;
+}
+
+
+
+
+/************* FLECHAS MENÚ *******************/
+
+#navega{
+	position: absolute;
+	z-index:4;	
+}
+
+#navega #flchMux_menuIzq, #navega #flchMux_menuDch{
+	position: absolute;
+	top:0;
+	cursor: pointer;
+}
+
+#navega #flchMux_menuIzq{
+	background:#fff url('../img/flechaIzq_modal_mux.gif');
+	width:30px;
+	height:64px;
+	left:20px;
+}
+#navega #flchMux_menuDch{
+	background:#fff url('../img/flechaDch_modal_mux.gif') no-repeat right top;
+	width:30px;
+	height:64px;
+	left:723px;
+	left:800px;
+}
+
+/******** GALERÍA ******************/
+
+#img_mux{
+	position: absolute;
+
+	z-index:1;
+	margin:0;
+	padding:0;
+	border: none;
+	
+	display: inline;
+	float: left;
+	white-space: nowrap; /*scroll horizontal*/
+	/*width: 981px;	*/
+	width: 100%;	
+	top:0px;
+	left:0;
+
+}
+
+#img_mux img{
+	/*vertical-align: top;*/
+	/*display:none;*/
+	position:absolute;
+	top:64px;
+}
+
+#img_mux .oculta_imagen{
+	display:none;
+}
+
+/************* FLECHAS GALERÍA **************************/
+
+#navegaFotos_mux{
+	position:absolute;
+	z-index:5;
+	top:73px;
+}
+
+#navegaFotos_mux #flechaIzq_mux, #navegaFotos_mux #flechaDch_mux{
+	position:absolute;
+	top:0;
+	cursor: pointer;
+}
+
+#navegaFotos_mux #flechaDch_mux{
+	left: 930px;
+}
+
+#navegaFotos_mux #flechaIzq_mux{
+	left: 0px;
+}

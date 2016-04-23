@@ -1,0 +1,42 @@
+/******* TELEFONICA TEXT REGULAR *************/
+@font-face {
+	font-family: 'TelefonicaTextRegular';
+	src: url('fonts/telefonicatext-regular-webfont.eot');
+	src: local('☺'), url('fonts/telefonicatext-regular-webfont.woff') format('woff'), url('fonts/telefonicatext-regular-webfont.ttf') format('truetype'), url('fonts/telefonicatext-regular-webfont.svg#webfont1WRrrJGb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/******* TELEFONICA TEXT BOLD *************/
+@font-face {
+	font-family: 'TelefonicaTextBold';
+	src: url('fonts/telefonicatext-bold-webfont.eot');
+	src: local('☺'), url('fonts/telefonicatext-bold-webfont.woff') format('woff'), url('fonts/telefonicatext-bold-webfont.ttf') format('truetype'), url('fonts/telefonicatext-bold-webfont.svg#webfont1WRrrJGb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/******* TELEFONICA TEXT ITALIC *************/
+@font-face {
+	font-family: 'TelefonicaTextItalic';
+	src: url('fonts/telefonicatext-italic-webfont.eot');
+	src: local('☺'), url('fonts/telefonicatext-italic-webfont.woff') format('woff'), url('fonts/telefonicatext-italic-webfont.ttf') format('truetype'), url('fonts/telefonicatext-italic-webfont.svg#webfont1WRrrJGb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/******* TELEFONICA TEXT LIGHT *************/
+@font-face {
+	font-family: 'TelefonicaHeadlineLightRegular';
+	src: url('fonts/telefonicaheadline-light-webfont.eot');
+	src: local('☺'), url('fonts/telefonicaheadline-light-webfont.woff') format('woff'), url('fonts/telefonicaheadline-light-webfont.ttf') format('truetype'), url('fonts/telefonicaheadline-light-webfont.svg#webfont1WRrrJGb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+

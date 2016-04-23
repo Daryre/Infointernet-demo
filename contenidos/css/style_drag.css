@@ -1,0 +1,237 @@
+#select_drag #instrucciones{
+	position: relative;
+	top:-10px;
+	left:30px;
+	width: 650px;
+	height: 80px;
+}
+
+
+#instrucciones #instrucciones_select{
+	display:block;
+}
+
+#instrucciones .instrucciones_drag{
+	display:none;
+}
+
+#instrucciones .instrucciones_drag_activo{
+	display:block;
+	width: 650px;
+}
+
+#instrucciones .numeros{
+	clear:both;
+	float:left;
+	vertical-align: text-bottom;
+}
+
+#instrucciones .numeros p{
+	font-family:LatoRegular, Arial;
+	font-size:25px;
+	font-size:18px;
+	color:#fff;
+	margin-top:20px;
+	margin-top:30px;
+	
+}
+
+#instrucciones .text_in{
+	float:left;
+	padding-right:10px;
+}
+
+#instrucciones .text_in p{
+	font-family:LatoRegular, Arial;
+	margin-top:30px;
+	font-size:14px;
+	color:#fff;	
+	width:480px;
+	width:400px;
+	padding-left:10px;
+	line-height: 120%;
+}
+
+
+
+
+.selecciona_drag{
+	position: absolute;
+	top:85px;
+	width: 690px;
+}
+
+
+
+#selecciona .opciones{
+	float:left;
+	margin: 0 15px 0 15px;
+	cursor: pointer;
+}
+
+
+#selecciona .opciones label{
+	font-family:LatoLight, Arial;
+	font-size:20px;
+	font-weight:bold;
+	color:#003245;
+	vertical-align:top;
+	position:relative;
+	top:20px;
+	left:65px;
+}
+
+.seleccionado{
+	margin:0;
+	border:2px solid #8fa20d;
+}
+
+.noseleccionado
+{	
+	margin:2px;
+	border:none;
+}
+
+#arrastra{
+	display: none;
+}
+
+#arrastra #img_background{
+	position:absolute;
+	/*top:130px;*/
+	top:80px;
+	left:20px;
+}
+
+
+#arrastra .drop{
+	position:absolute;
+	color: #fff;
+	margin: 10px;
+	display: none;
+/*	border:3px #d17211 solid;*/
+}
+
+#arrastra #drag{
+	position:absolute;
+	cursor:pointer;
+	top:130px;
+}
+
+ #drag .drag{
+	position:absolute;
+	cursor:pointer;
+	z-index:0;
+ }
+
+#sig{
+	cursor:pointer;
+	position:absolute;
+	left:634px;
+	top:378px;
+}
+
+#arrastra #fondo_tarjeta_drag{
+	position:absolute;
+	top:103px;
+	left:620px;
+}
+
+/*******************************************/
+
+
+#feedback_select{
+	display:none;
+	z-index:10;
+}
+
+#feedback_select #fondo{
+	width:723px;
+	height:500px;
+	background-color:#000;
+	opacity:0.3;
+	position:absolute;
+	top:0;
+	z-index:8;
+}
+
+#feedback_select #popup_drag{
+	width:308px;
+	height:166px;
+	background:url(../img/fondo_popup_drag.png) 0 center no-repeat;
+	position:absolute;
+	left: 50%;
+    margin-left: -154px;
+    margin-top: -88px;
+    margin-top: 0px;
+	z-index:11;
+
+}
+
+#popup_drag #textos_drag #titulo_popup{
+	font-family:LatoRegular, Arial;
+	font-weight:bold;
+	margin: 16px 0 0 15px;
+	font-size:16px;
+	color:#fff;	
+	z-index:12;
+}
+
+#popup_drag #textos_drag #texto_popup{
+	font-family:LatoRegular, Arial;
+	margin: 20px 0 0 15px;
+	font-size:14px;
+	color:#004356;	
+	z-index:12;
+}
+
+#textos_drag{
+	position:relative;
+}
+
+#textos_drag p{
+	width:280px;
+	z-index:12;
+}
+
+
+#botones{
+	cursor:pointer;
+	position:absolute;
+	width:723px;
+	top:410px;
+	/*z-index:45;*/
+}
+
+#botones #btComprueba_drag, #botones #btSiguiente_drag{
+	float: right;
+}
+
+#botones #btSiguiente_drag{
+	display: none;
+}
+
+
+#select_drag #tarjetas_arrastardas{
+	position: absolute;
+	/*z-index: 1;*/
+	/*top: 130px;*/
+	top: 80px;
+}
+
+#select_drag #tarjetas_arrastardas img{
+	z-index: 1;
+}
+
+/*******************************************/
+
+#tapa{
+	position:absolute;
+	margin-top:80px;
+	width:725px;
+	height:398px;
+	background-color:#fff;
+	z-index:50;
+	display:none;
+	opacity:0;
+}

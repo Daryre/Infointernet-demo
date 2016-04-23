@@ -1,0 +1,69 @@
+body{
+	overflow:hidden;
+}
+
+#content{
+	width: 970px;
+	height: 536px;
+	overflow:hidden;
+}
+
+#galeria_fotos_modal{
+	overflow:hidden;
+	position: absolute;
+	display: inline;
+	float: left;
+	white-space: nowrap; /*scroll horizontal*/
+	left:0;
+}
+
+#galeria_fotos_modal img{
+	vertical-align: top;
+	margin-top:10px;
+	top:20px;
+}
+
+
+#galeria_fotos_modal .titulofoto{
+	position: absolute;
+	top:-25px;
+	display: block;
+	width:300px;
+	background-color:#d17211;
+	color: #fff;
+	font-family: Arial;
+	font-size: 25px;
+	text-align: center;
+	line-height: 50px;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+
+#navegaFotosModal{
+	position:absolute;
+	/*z-index:5;*/
+	top:482px;
+	top:474px\0/;
+}
+
+
+#navegaFotosModal #flechaIzqM, #navegaFotosModal #flechaDchM{
+	position:absolute;
+	top:0px;
+	cursor: pointer;
+}
+
+#navegaFotosModal #flechaDchM{
+	left: 900px;
+}
+
+.flecha_desactivada{
+   display: none;
+}
+
+.flecha_activada{
+	cursor: pointer;
+  display: block;
+}
+

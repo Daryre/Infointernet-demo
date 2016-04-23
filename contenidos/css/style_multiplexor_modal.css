@@ -1,0 +1,48 @@
+body{
+	width:986px;
+	height:565px;
+}
+
+#contenido{
+	position:absolute;
+	display:block;
+	top:0px;
+}
+			
+#contenido #grafico_base{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+#contenido .parte_mux{
+	position:absolute;
+	z-index:2;
+	cursor:pointer;
+	/****************/
+	/*border-style:solid;
+	border-width:1px;
+	border-color:red;
+	opacity:.8;*/
+}
+#contenido .parte_mux_over {
+	position:absolute;
+	z-index:1;
+
+}
+
+/*#contenido .parte_mux:hover{
+	opacity:0;
+}*/
+
+#contenido div.parte_mux_on{
+	position:absolute;
+	top:60px;
+	left:0;
+	z-index:3;
+	display:none;
+	cursor: pointer;
+}
+
+

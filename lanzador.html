@@ -1,0 +1,178 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <script type="text/javascript">
+    /*
+* Propiedad de Educaterra S.L.U
+* Prohibido cualquier uso de esta libreria sin el expreso consentimiento de su propietario, fuera del contenido con el que fu� distribuida.
+*Librer�a JavaScript que emula un Runtime Enviroment de SCORM. En principio solo SCORM 1.1 al no mostrar la navegaci�n.
+*No est�n inicializadas todas las variables que se deben inicializar.
+*Admite por otro lado la escritura de cualquier variable que el curso desee.
+*Por supuesto al acceder otra vez el curso, las variables son reinicializadas,
+*no almacenandose ningun estado de las mismas. No gestiona ningun error, por lo que no es util como sistema de depuraci�n de errores a la hora de la creaci�n de contenidos
+*USO:
+*incializar una variable llamada API de tipo laAPI:
+*var API=new laAPI();
+*Poner las variables de la API, a su estado inicial:
+*API.inicializar();
+*probablemente deba incluir alguna informaci�n en la variable cmi.launch_data
+*API.LMSSetValue("cmi.launch_data",launchdata);
+	/*
+* Propiedad de Educaterra S.L.U
+* Prohibido cualquier uso de esta libreria sin el expreso consentimiento de su propietario, fuera del contenido con el que fu� distribuida.
+*Librer�a JavaScript que emula un Runtime Enviroment de SCORM. En principio solo SCORM 1.1 al no mostrar la navegaci�n.
+*No est�n inicializadas todas las variables que se deben inicializar.
+*Admite por otro lado la escritura de cualquier variable que el curso desee.
+*Por supuesto al acceder otra vez el curso, las variables son reinicializadas,
+*no almacenandose ningun estado de las mismas. No gestiona ningun error, por lo que no es util como sistema de depuraci�n de errores a la hora de la creaci�n de contenidos
+*USO:
+*incializar una variable llamada API de tipo laAPI:
+*var API=new laAPI();
+*Poner las variables de la API, a su estado inicial:
+*API.inicializar();
+*probablemente deba incluir alguna informaci�n en la variable cmi.launch_data
+*API.LMSSetValue("cmi.launch_data",launchdata);
+*Posteriormente llamar a la p�gina de inicio del curso.
+*/
+
+var datamodel= new Array();;
+function _inicializar()
+{
+	depuracion("Se inicializan las variables");
+	datamodel= new Array();
+	datamodel["cmi.core.score_raw"]="0";
+	datamodel["cmi.core.lesson_status"]="not attempted";
+	datamodel["cmi.core.lesson_location"]="";
+	datamodel["cmi.suspend_data"]="";
+	datamodel["cmi.student_data.mastery_score"]="50";
+	datamodel["cmi.core.total_time"]="";
+	datamodel["cmi.core.session_time"]="";
+	datamodel["cmi.core.student_id"]="_";
+	datamodel["cmi.core.student_name"]="_";
+	datamodel["cmi.core.entry"]="ab-initio";
+	datamodel["cmi.core.exit"]="";
+	datamodel["cmi.core.lesson_mode"]="normal";
+	datamodel["cmi.core._children"]="total_time,session_time,student_id,student_name,entry,exit,.score_raw,lesson_status,lesson_location,credit";
+	datamodel["cmi.core.score._children"]="max,raw,min";
+	datamodel["cmi.student.data__children"]="";
+	datamodel["cmi.core.credit"]="credit";
+	datamodel["cmi.launch_data"]="";
+	datamodel["cmi.core.score.max"]="0";
+	datamodel["cmi.core.score.raw"]="0";
+	datamodel["cmi.core.score.min"]="0";
+	datamodel["cmi.objectives._count"]="0";
+	datamodel["cmi.interactions._count"]="0";
+}
+var ventanaDepuracion=null;
+var mododepuracion=false;
+/**
+*Funcion que activa el modo de depuracion del sistema. Imprime todas las variables escritas o pedidas en una ventana aparte
+*/
+function activaDepuracion()
+{
+	ventanaDepuracion=window.open("about:blank","depuracion",
+          "scrollbars=yes,status=no,width=300,height=300,toolbar=no,resizable=yes");
+	 mododepuracion=true;
+}
+function laAPI()
+{
+	this.LMSInitialize=_APILMSInitialize;
+	this.LMSCommit=_APILMSCommit;
+	this.LMSFinish=_APILMSFinish;
+	this.LMSSetValue=_APISetValue;
+	this.LMSGetValue=_APIGetValue;
+	this.LMSGetLastError=_APIDevolverCadenaVacia;
+	this.LMSGetErrorString= _APIDevolverValorVacio;
+	this.LMSGetDiagnostic= _APIDevolverValorVacio;
+	this.inicializar=_inicializar;
+
+}
+var textoventanadepuracion="";
+function depuracion(texto)
+{
+	if(mododepuracion)
+	{
+		textoventanadepuracion=textoventanadepuracion+"<hr>"+texto;
+		ventanaDepuracion.document.open();
+		ventanaDepuracion.document.writeln("<html><body>"+textoventanadepuracion+"</body></html>");
+		ventanaDepuracion.document.close();
+	}
+}
+
+function _APISetValue(parametro,valor)
+{
+	datamodel[parametro]=valor;
+	depuracion("Insertado:"+parametro+" con el valor:"+valor);
+	return true;
+
+}
+function _APIGetValue(parametro)
+{
+	var valor= datamodel[parametro];
+	depuracion("Pedido:"+parametro+" con el valor:"+valor);
+	if(valor!=null)
+	{
+		return valor;
+	}
+	else
+	{
+		return "";
+	}
+
+}
+
+function _APILMSInitialize(cadena)
+{
+	depuracion("Inicializada api");
+	return "true";
+}
+function _APILMSFinish(cadena)
+{
+	depuracion("Finalizada api");
+	return "true";
+}
+function _APILMSCommit(cadena)
+{
+	depuracion("Hecho un commit");
+	return "true";
+}
+function _APIDevolverCadenaVacia()
+{
+	return "";
+}
+function _APIDevolverValorVacio(valor)
+{
+	return "";
+}
+
+var API=new laAPI();
+
+function lanzarSCORM(url,launchdata)
+{
+        //activaDepuracion();
+	API.inicializar();
+	API.LMSSetValue("cmi.launch_data",launchdata);
+        API.LMSSetValue("cmi.core.lesson_location",launchdata);
+	window.open(url,"ventanacursos");
+}
+function lanzarOtraVez(url,launchdata)
+{
+	API.LMSSetValue("cmi.launch_data",launchdata);
+	window.open(url,"ventanacursos");
+}
+</script>
+  </head>
+  <body>
+      <script type="text/javascript">
+          lanzarSCORM('index.html','');
+      </script>
+
+  </body>
+</html>
+
